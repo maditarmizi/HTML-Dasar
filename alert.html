@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Alert</title>
+</head>
+<body>
+  
+   <!-- <button type="button" onclick="Swal.fire('Selamat Datang', 'Latihan Sweet', 'error')">
+     Klik Disini
+   </button> -->
+  <button type="button" id="btn">Klik Ya sayang</button> 
+  <script src="dist/sweetalert2.all.min.js"></script>
+  
+  <script>
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', function() {
+      Swal.fire({
+  title: 'Submit your Github username',
+  input: 'text',
+  inputAttributes: {
+    autocapitalize: 'off'
+  },
+  showCancelButton: true,
+  confirmButtonText: 'Look up',
+  showLoaderOnConfirm: true,
+  preConfirm: (login) => {
+    return fetch(`//api.github.com/users/${login}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.statusText)
+        }
+        return response.json()
+      })
+      .catch(error => {
+        Swal.showValidationMessage(
+          `Request failed: ${error}`
+        )
+      })
+  },
+  allowOutsideClick: () => !Swal.isLoading()
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: `${result.value.login}'s avatar`,
+      imageUrl: result.value.avatar_url
+    })
+  }
+});
+    });
+  </script> 
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <style>
+    .satu p {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0 30px;
+      color: #5A88E6;
+    }
+  </style>-->
+  <title>Document</title>
+</head>
+<body>
+  
+ <!-- <h2>Jam Digital</h2>
+  <div class="1">
+    <p id="jam"></p>
+    <p id="menit"></p>
+    <p id="detik"></p>
+    
+  </div> -->
+  
+  <div>
+    <b><span id="servertime"></span></b>
+  </div>
+  <script>
+    /*window.setTimeout("waktu()", 1000);
+    
+    function waktu() {
+      var waktu = new Date();
+      setTimeout("waktu()", 1000);
+      document.getElementById("jam").innerHTML = waktu.getHours();
+      document.getElementById("menit").innerHTML = waktu.getMinutes();
+      document.getElementById("detik").innerHTML = waktu.getSeconds();
+    }*/
+    var currenttime = 'September 19, 2021 11:02:31';
+    var dayarray = new Array("Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggu");
+    var montharray = new Array("Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
+    var serverdate = new Date(currenttime);
+
+    function padlength(what) {
+        var output = (what.toString().length === 1) ? "0" + what : what;
+        return output;
+    }
+
+    function displaytime() {
+        serverdate.setSeconds(serverdate.getSeconds() + 1);
+        var datestring = dayarray[serverdate.getDay() - 1] + ", " + padlength(serverdate.getDate()) + " " + montharray[serverdate.getMonth()] + " " + serverdate.getFullYear();
+        var timestring = padlength(serverdate.getHours()) + ":" + padlength(serverdate.getMinutes()) + ":" + padlength(serverdate.getSeconds());
+        document.getElementById("servertime").innerHTML = datestring + " " + timestring;
+    }
+
+    window.onload = function() {
+        setInterval("displaytime()", 1000);
+    }
+  </script>
+</body>
+</html>

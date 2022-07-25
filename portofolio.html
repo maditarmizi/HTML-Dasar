@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Ravialdo Imanda Putra</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+	<link rel="stylesheet" href="dist/css/style.css">
+	
+	<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+	
+	<div id="app"></div>
+	
+	<!-- <div style="position:fixed;bottom:20px;right:20px;z-index:100;">
+		<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+		<div class="elfsight-app-379559cc-ed25-45a9-8853-7aa76983a66f"></div>
+	</div> -->
+
+	
+	<script type="text/babel">
+	
+		const BrowserRouter = ReactRouterDOM.BrowserRouter,
+		Switch = ReactRouterDOM.Switch,
+		Route = ReactRouterDOM.Route,
+		Link = ReactRouterDOM.Link;
+		
+		AOS.init({
+			duration:1000
+		});
+		
+		function Nav(){
+			return <ul className="nav text-uppercase justify-content-center shadow">
+				<li className="nav-item">
+					<Link className="nav-link" to="about">about</Link>
+				</li>
+				<li className="nav-item">
+					<Link className="nav-link" to="resume">resume</Link>
+				</li>
+				<li className="nav-item">
+					<Link className="nav-link" to="portofolio">portofolio</Link>
+				</li>
+				<li className="nav-item">
+					<Link className="nav-link" to="blog">blog</Link>
+				</li>
+				<li className="nav-item">
+					<Link className="nav-link" to="contact">contact</Link>
+				</li>
+			</ul>;
+		}
+		
+		function Jumbotron(){
+			return <div className="jumbotron shadow">
+					<img src="dist/img/ravialdo.jpg" className="shadow" data-aos="fade-up"/>
+					<div className="text-author" data-aos="fade-up">Ravialdo Imanda Putra <span><img src="dist/svg/check.svg" class="icon-svg"/></span></div>
+					<div className="profession mx-auto shadow-sm" data-aos="fade-up">Web Developer</div>
+					<div className="py-3" data-aos="fade-up">
+				  	<a href="https://m.facebook.com/vido.scooterist.7/">
+						  <img src="dist/svg/facebook.svg" class="icon-svg mr-2"/>
+					  </a>
+					  <a href="https://www.instagram.com/ravialdo_dev">
+					  	<img src="dist/svg/instagram.svg" class="icon-svg"/>
+					  </a>
+						<a href="https://github.com/ravialdo">
+						  <img src="dist/svg/github.svg" class="icon-svg ml-2"/>
+						</a>
+					</div>
+					<div className="mb-2" data-aos="fade-up">
+						<img src="dist/svg/calendar.svg" class="icon-svg"/> 27 Februari 2001
+					</div>
+					<div className="mb-2" data-aos="fade-up">
+						<img src="dist/svg/placeholder.svg" class="icon-svg"/> Majalengka, Indonesia
+					</div>
+					<div className="mb-2" data-aos="fade-up">
+						<img src="dist/svg/gmail.svg" class="icon-svg"/> ravialdoscoots@gmail.com
+					</div>
+					<div className="mb-2" data-aos="fade-up">
+						<img src="dist/svg/call.svg" class="icon-svg"/> +6285-624-299-539
+					</div>
+					<BrowserRouter>
+						<Link to="/dist/cv/ravialdo-cv.pdf" className="btn btn-primary shadow" target="_blank" data-aos="fade-up" download>
+							<img src="dist/svg/download.svg" class="icon-svg"/> Download CV
+						</Link>
+					</BrowserRouter>
+				</div>;
+		}
+		
+		function About(){
+			return <div>
+				<div className="ml-4">
+					<div className="content-title">About</div>
+					<div class="divider"></div>
+					<div className="divider-x"></div>
+					<p class="mr-4" data-aos="fade-up">Saya adalah seorang Web Developer saya juga sangat tertarik mempelajari hal - hal baru seputar tentang dunia programming, saya juga sangat senang berbagi pengetahuan dan bertukar pikiran dengan teman - teman  atau pun orang lain, Dengan berbagi ilmu pengetahuan kita akan semakin bermanfaat bagi orang lain.</p>
+				</div>
+				<div className="row text-center">
+					<div  className="col-md-6 text-desc">
+						<img src="dist/svg/computer.svg" class="img-svg" data-aos="fade-up"/>
+						<div data-aos="fade-up">Web Design</div>
+						<p data-aos="fade-up">HTML, CSS adalah salah satu kewajiban dalam membuat sebuah tampilan suatu website.</p>
+					</div>
+					<div  className="col-md-6 text-desc">
+						<img src="dist/svg/data.svg" class="img-svg" data-aos="fade-up"/>
+						<div data-aos="fade-up">Web Development</div>
+						<p data-aos="fade-up">Ada beberapa tahapan dalam pembuatan website seperti analisa, desain, pengkodean, pengujian, pemeliharaan.</p>
+					</div>
+				</div>
+			</div>;
+		}
+		
+		function Resume(){
+			return <div className="ml-4">
+				<div className="content-title">Resume</div>
+				<div class="divider"></div>
+				<div className="divider-x"></div>
+				<div className="content-title m-0" data-aos="fade-up">
+					<img src="dist/svg/student.svg" class="icon-svg-md"/>
+					Education
+				</div>
+				<div className="text-title">
+						<div data-aos="fade-up">
+							<img src="dist/svg/chevron.svg" class="icon-svg" data-aos="fade-up"/>
+								smk negeri 1 talaga
+						</div>
+						<p data-aos="fade-up">2017 - 2020 / rekayasa perangkat lunak</p>
+				</div>
+			</div>;
+		}
+		
+		function Portofolio(){
+			return <div className="ml-4">
+				<div className="content-title">Portofolio</div>
+				<div class="divider"></div>
+				<div className="divider-x"></div>
+				<div class="content-title" data-aos="fade-up">Project</div>
+				<div class="row mr-1 mt-3">
+				
+					<div class="col-md-6">
+						<div class="card">
+							<img src="dist/img/aplikasi-pembayaran-spp.png" class="card-img-top" data-aos="fade-up"/>
+								<div class="card-body">
+									<h5 class="card-title" data-aos="fade-up">Aplikasi Pembayaran SPP Sekolah Berbasis Web</h5>
+									<p class="card-text" data-aos="fade-up">Aplikasi ini merupakan aplikasi untuk mendata pembayaran SPP di suatu sekolah yang bertujuan untuk mempermudah dan menghemat biaya.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6">
+						<div class="card">
+							<img src="dist/img/aplikasi-pengaduan-masyarakat.png" class="card-img-top h-img" data-aos="fade-up"/>
+								<div class="card-body">
+									<h5 class="card-title" data-aos="fade-up">Aplikasi Pelaporan Pengaduan Masyarakat Berbasis Web</h5>
+									<p class="card-text" data-aos="fade-up">Aplikasi ini merupakan untuk menerima maupun melaporkan pengaduan masyarakat yang bertujuan untuk mempersingkat waktu dalam melapor.</p>
+							    <a class="btn btn-primary" data-aos="fade-up" href="http://pelaporan-pengaduan-masyarakat.herokuapp.com">Demo</a>
+							  </div>
+						</div>
+					</div>
+					
+				</div>
+			</div>;
+		}
+
+		
+		function Blog(){
+			return <div className="ml-4">
+				<div className="content-title">Blog</div>
+				<div class="divider"></div>
+				<div className="divider-x"></div>
+				  <div class="row mr-1 mt-3">
+				    <div class="col-md-6">
+				      <div class="card">
+				        <img src="dist/img/laravel-heroku.jpg" class="card-img-top" alt="Gambar tidak ditemukan" data-aos="fade-up"/>
+				          <div class="card-body" data-aos="fade-up">
+				            <h5 class="card-title">Cloud Platform Project Laravel Dengan Heroku #2</h5>
+				            <p class="card-text">Melanjutkan tutorial yang kemarin yang dimana kita telah berhasil mengonlinekan project laravel kita di layanan cloud platform heroku.com, bagi yang <a href="https://techiraid.com/2020/10/18/cloud-platform-project-laravel-dengan-heroku-2/" target="_blank">[Lihat Selengkapnya..]</a> </p>
+				          </div>
+				      </div>
+				    </div>
+				      <div class="col-md-6">
+				      <div class="card">
+				        <img src="dist/img/laravel-heroku.jpg" class="card-img-top" alt="Gambar tidak ditemukan" data-aos="fade-up"/>
+				          <div class="card-body" data-aos="fade-up">
+				            <h5 class="card-title">Cloud Platform Project Laravel Dengan Heroku #1</h5>
+				            <p class="card-text">Cloud Platform yang di sediakan oleh heroku dapat menjadi salah satu pilihan anda, untuk anda yang masih belajar mengonlinekan project <a href="https://techiraid.com/2020/10/17/cloud-platform-project-laravel-dengan-heroku-1/" target="_blank">[Lihat Selengkapnya..]</a> </p>
+				          </div>
+				      </div>
+				    </div>
+				  </div>
+				
+			</div>;
+		}
+		
+		function Contact(){
+			return <div className="ml-4">
+				<div className="content-title">Contact</div>
+				<div class="divider"></div>
+				<div className="divider-x"></div>
+				<div class="mr-4" data-aos="fade-up">
+						
+						<div className="form-group">
+							<textarea rows="5" className="form-control border-0" name="text" placeholder="Tulis pesan.." id="text"></textarea>
+						</div>
+						<button type="button" className="btn btn-primary" onClick={Send}>
+							Kirim <img src="dist/svg/paper-plane.svg" className="icon-svg"/>
+						</button>
+						
+				</div>
+			</div>;
+		}
+		
+		function Footer(){
+			return <div className="mb-5 text-center">
+					Developed <img src="dist/svg/coder.svg" class="icon-svg fa-spin"/> Ravialdo Imanda Putra
+				</div>;
+		}
+		
+		function NoMatch(){
+			return <h1 class="pt-5 text-center">404, Halaman tidak ditemukan</h1>;
+		}
+		
+		function Send(e){
+			e.preventDefault();
+			var text = document.getElementById('text').value;
+			window.location = 'https://api.whatsapp.com/send?phone=+6285624299539&text='+text;
+		}
+
+		class App extends React.Component {
+			
+			render() {
+				
+				return (
+					<div className="jumbotron">
+						<BrowserRouter>
+							<div className="container">
+								<Nav/>
+								<Jumbotron/>
+								<div className="content shadow">
+								<main>
+									<Switch>
+										<Route path="/" exact component={About} />
+										<Route path="/about" exact component={About} />
+										<Route path="/resume" exact component={Resume} />
+										<Route path="/portofolio" exact component={Portofolio} />
+										<Route path="/blog" exact component={Blog} />
+										<Route path="/contact" exact component={Contact} />
+										<Route component={NoMatch} />
+									</Switch>
+								</main>
+							</div>
+								<Footer/>
+							</div>
+						</BrowserRouter>
+					</div>
+				);
+			}
+		}
+		
+		ReactDOM.render(
+			<App />,
+			document.getElementById('app')
+		);
+	
+	</script>
+	
+</body>
+</html>

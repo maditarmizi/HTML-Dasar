@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kalkulator</title>
+  <style type="text/css">
+    body{
+      background-color: white;
+    }
+    #screen{
+      text-align: right;
+    }
+    #layer-btn{
+      margin-top: 400px;
+      background-color: gold;
+    }
+    .btn{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      width: 70px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <form name="kalkulator">
+    <input type="text" id="screen" name="screen">
+    <div id="layer-btn">
+      <table align="center">
+        <tr>
+          <td><input type="button" class="btn" value="7" onclick="output('7')"></td>
+          <td><input type="button" class="btn" value="8" onclick="output('8')"></td>
+          <td><input type="button" class="btn" value="9" onclick="output('9')"></td>
+          <td><input type="button" class="btn" value="/" onclick="output('/')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" class="btn" value="4" onclick="output('4')"></td>
+          <td><input type="button" class="btn" value="5" onclick="output('5')"></td>
+          <td><input type="button" class="btn" value="6" onclick="output('6')"></td>
+          <td><input type="button" class="btn" value="*" onclick="output('*')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" class="btn" value="1" onclick="output('1')"></td>
+          <td><input type="button" class="btn" value="2" onclick="output('2')"></td>
+          <td><input type="button" class="btn" value="3" onclick="output('3')"></td>
+          <td><input type="button" class="btn" value="-" onclick="output('-')"></td>
+        </tr>
+        <tr>
+          <td><input type="button" class="btn" value="reset" onclick="output('reset')"></td>
+          <td><input type="button" class="btn" value="0" onclick="output('0')"></td>
+          <td><input type="button" class="btn" value="=" onclick="output('=')"></td>
+          <td><input type="button" class="btn" value="+" onclick="output('+')"></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</body>
+</html>

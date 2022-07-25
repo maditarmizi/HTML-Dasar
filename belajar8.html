@@ -1,0 +1,69 @@
+
+ <!--Fungsi Dari DOCTYPE html ini adalah menandakan/menginformasikan pada browser bahwa dokumen yang sedang anda buka saat ini adalah Dokumen HTML -->
+<DOCTYPE html>
+  <!-- fungsi Kode html tersebut menandakan  bahwa kode - kode yang di tulis di dalamnya adalah kode HTML-->
+<html>
+  <!-- Tag Head Berfungsi untuk menyimpan berbagai informasi Dokumen HTML & tidak akan ditampilkan secara langsung pada web browser -->
+  <head>
+    <!-- Tag Title Berfungsi untuk Menampilkan teks  pada tab browser--> 
+    <title>Belajar HTML Dasar</title>
+  </head>
+  <!-- Tag Body Berfungsi untuk Menampilkan Tulisan pada browser + tag pembuka dari badan dokumen HTML -->
+  <body>
+    <h1>Belajar Membuat Tabel</h1>
+    <p>Tabel Berfungsi untuk menampilkan data, kita bisa menggunakan tag table</p>
+    <!-- cuma tabel -->
+    <table border="2">
+      <!-- Untuk membuat sebuah baris pada tabel, kita cukup gunakan tag <tr> / table row dan ditulis di dalam tag table-->
+      <tr>
+        <!-- Sedangkan untuk menentukan banyak nya kolom, kita pakai tag <td> / table data yang digunakan di dalam tag <tr>-->
+        <!-- Untuk menyatukan kolom atau baris (merge-cell) kita tambahkan atribut colspan (untuk 
+          merge horizontally-secara horizontal) atau rowspan (untuk merge vertically).-->
+        <td>No</td>
+        <td>Nama</td>
+        <td>Alamat</td>
+        
+      </tr>
+      <tr>
+        <td rowspan="2">No</td>
+        <td colspan="2">Jenis Kelamin</td>
+        <td rowspan="2">Nama</td>
+      </tr>
+      <tr>
+        <td>L</td>
+        <td>P</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>L</td>
+        <td></td>
+        <td>Adi</td>
+      </tr>
+    </table>
+    <br>
+    <!-- Tabel yang dianjurkan-->
+    <table border="1">
+      <!-- tag thead gunanya untuk baris yang menjadi judul tabel -->
+      <thead>
+        <tr>
+          <td rowspan="2">No</td>
+          <td colspan="2">Jenis Kelamin</td>
+          <td rowspan="2">Nama</td>
+        </tr>
+        <tr>
+          <td>L</td>
+          <td>P</td>
+        </tr>
+      </thead>
+      <!-- tag tbody gunanya untuk data/isi dari tabel -->
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>L</td>
+          <td></td>
+          <td>Adi</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
